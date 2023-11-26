@@ -21,7 +21,6 @@ function Todolistarray() {
   const handleClick = () => {
     if (input !== "") {
       setBoxes((prevInput) => [...prevInput, input]);
-      console.log(boxes);
       setInput("");
     }
   };
@@ -90,6 +89,7 @@ function Todolistarray() {
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(boxes));
+    console.log(boxes);
   }, [boxes]);
 
   return (
